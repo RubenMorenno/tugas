@@ -1,0 +1,67 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* Animasi fade-in untuk elemen saat dimuat */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* Animasi gambar ketika di-hover */
+.profile-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1); /* Membesarkan gambar saat di-hover */
+}
+
+/* Animasi slide-in untuk about-me */
+.slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Keyframes untuk animasi fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Keyframes untuk animasi slide-in */
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Detil styling tetap */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.profile-image img {
+  border: 5px solid #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-me {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #17a2b8;
+}
+
+.details h3 {
+  font-size: 1.75rem;
+}
+
+.details p {
+  font-size: 1.1rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+}
