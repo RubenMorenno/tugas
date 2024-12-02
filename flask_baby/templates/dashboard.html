@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="d-flex">
+        <div class="sidebar bg-light p-3">
+            <h5>Navigation</h5>
+            <ul class="list-unstyled">
+                <li><a href="{{ url_for('dashboard') }}" class="btn btn-link">Dashboard</a></li>
+                <li><a href="{{ url_for('krs') }}" class="btn btn-link">KRS</a></li>
+                <li><a href="{{ url_for('nilai') }}" class="btn btn-link">Nilai</a></li>
+                <li><a href="{{ url_for('laporan') }}" class="btn btn-link">Laporan</a></li>
+                <li><a href="{{ url_for('logout') }}" class="btn btn-link">Logout</a></li>
+            </ul>
+        </div>
+        <div class="content w-100 p-4">
+            <h4>Selamat Datang, {{ nama }}</h4>
+            <p>Tempat Tinggal: {{ tempattinggal }}</p>
+            <p>Tanggal Lahir: {{ tanggallahir }}</p>
+            <p>NIM: {{ nim }}</p>
+            <p>Jurusan: {{ jurusan }}</p>
+            <p>Email: {{ email }}</p>
+        </div>
+    </div>
+</body>
+</html>
